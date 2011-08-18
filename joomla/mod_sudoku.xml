@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" client="site">
+	<name>sudoku</name>
+	<author>Le Sudoku</author>
+	<creationDate>02 août 2011</creationDate>
+	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>webmaster@le-sudoku.fr</authorEmail>
+	<authorUrl>www.le-sudoku.fr</authorUrl>
+	<version>1.0.0</version>
+	<description>Intégrez des grilles de sudoku sur votre site web.</description>
+	<files>
+		<filename module="mod_sudoku">mod_sudoku.php</filename>
+	</files>
+	<config>
+	  <fields name="params">
+	    <fieldset name="basic" label="Paramètres des grilles de sudoku" description="Configuration du module">
+		    <field name="size" type="list" default="9" label="Type de sudoku">
+				<option value="9">9x9</option>
+				<option value="10">10x10</option>
+				<option value="12">12x12</option>
+				<option value="16">16x16</option>
+			</field>
+		    <field name="size" type="list" default="1" label="Niveau de difficulté">
+				<option value="0">facile</option>
+				<option value="1">moyen</option>
+				<option value="2">difficile</option>
+				<option value="3">expert</option>
+			</field>
+		    <field name="width" type="list" default="500" label="Largeur / hauteur">
+				<option value="450">450px</option>
+				<option value="500">500px</option>
+				<option value="550">550px</option>
+				<option value="600">600px</option>
+			</field>
+			<field name="background" type="text" default="FFFFFF" label="Couleur de fond (ex. FFFFFF)" />
+			<field name="language" type="list" default="fr" label="Langue">
+				<option value="fr">français</option>
+				<option value="en">anglais</option>
+			</field>
+	    </fieldset>
+	  </fields>
+	</config>
+</extension>
